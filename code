@@ -1,0 +1,63 @@
+// Code for the calculator.
+
+#include "stdafx.h"
+#include <iostream>
+
+float sum(float a, float b) {
+	return a + b;
+}
+
+float minus(float a, float b) {
+	return a - b;
+}
+
+float multiply(float a, float b) {
+	return a * b;
+}
+
+float divide(float a, float b) {
+	return a / b;
+}
+
+int main()
+{
+	char action;
+	float x, y, result;
+
+	std::cout << "Enter number 1: \n";
+	std::cin >> x;
+	std::cout << "Enter action required ('+', '-', '*' or '/').\n";
+	std::cin >> action;
+
+	switch(action) {
+	case '+':
+		std::cout << "Enter number 2: \n";
+		std::cin >> y;
+		result = sum(x, y);
+		std::cout << "The result is " << result << ".\n";
+		break;
+	case '-':
+		std::cout << "Enter number 2: \n";
+		std::cin >> y;
+		result = minus(x, y);
+		std::cout << "The result is " << result << ".\n";
+		break;
+	case '*':
+		std::cout << "Enter number 2: \n";
+		std::cin >> y;
+		result = multiply(x, y);
+		std::cout << "The result is " << result << ".\n";
+		break;
+	case '/':
+		std::cout << "Enter number 2: \n";
+		std::cin >> y;
+		result = divide(x, y);
+		std::cout << "The result is " << result << ".\n";
+		break;
+	default:
+		std::cout << "Wrong value.\n";
+		}
+
+    return 0;
+}
+
